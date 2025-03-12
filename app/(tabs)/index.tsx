@@ -15,6 +15,12 @@ export default function HomeScreen() {
         artboardName="Avatar 1"
         stateMachineName="avatar"
         style={{ width: "100%", height: "100%" }}
+        onRiveEventReceived={(event) => {
+          console.log(`${event.name} event received`);
+        }}
+        onStateChanged={(state) => {
+          console.log(`${state} changed`);
+        }}
       />
     </View>
   );
